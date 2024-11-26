@@ -1,3 +1,7 @@
+const home = (req, res)=>
+{
+  res.status(200).send('<h2 align=center> Name Reserver API Networks </h2>')
+}
 function submitName(req, res) {
 
     const name = req.body.name
