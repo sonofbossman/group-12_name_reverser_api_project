@@ -14,7 +14,6 @@ function submitName(req, res) {
        }
     }
 
-    res.json(reverseNameFunc(name))
 }
 
 function reverseNameFunc(name){
