@@ -31,3 +31,5 @@ function reverseNameFunc(name){
       reversed: reversed_name
   }    
 }
+
+export {home, submitName, reverseNameFunc} // exporting local modules for use
