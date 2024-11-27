@@ -2,7 +2,7 @@
 import express from 'express'
 import { home, submitName, reversedName } from "../controllers/controller.js"; // imports local modules which contain functions for handling the routes
 
-export const router = express.Router() //initialisation of a router instance using the expressrouter object and assigning it to the constant, router
+export const router = express.Router() //initialization of a router instance using the expressrouter object and assigning it to the constant, router
 
 // defining the routes
 router.route(`/`).get(home) // route for the homepage
