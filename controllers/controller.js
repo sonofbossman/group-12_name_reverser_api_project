@@ -1,7 +1,21 @@
 const home = (req, res)=>
 {
-  res.status(200).send('<h2 align=center> Name Reserver API Networks </h2>')
+  res.status(200).send('<h2 align="center"> Name Reserver API Networks </h2>')
 }
+
+function reversedName(req, res){
+
+const {name} = req.query // Destructuring the query params from the request body
+
+if(!name) {
+
+return res.status(400).json({ error: "Name query parameter must be provided!"})
+}
+
+res.json(reverseNameFunc(name))
+
+}
+
 function submitName(req, res) {
 
     const name = req.body.name
@@ -13,7 +27,7 @@ function submitName(req, res) {
         res.status(400).json({error: "Name query parameter is invalid"})
        }
     }
-
+    res.json(reverseNameFunc(name)) // returns the reversed name and original as a json object
 }
 
 function reverseNameFunc(name){
@@ -32,4 +46,4 @@ function reverseNameFunc(name){
   }    
 }
 
-export {home, submitName, reverseNameFunc} // exporting local modules for use
+export {home, submitName, reversedName} // exporting local modules for use

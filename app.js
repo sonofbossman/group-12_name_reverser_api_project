@@ -11,6 +11,7 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/', router)
 
+app.get('/reverse-name', router);
 // setup listener 
 app.listen(PORT, ()=>{
     console.log(`Server is listening on port ${PORT}...`)
